@@ -4,12 +4,18 @@ S-001: レシート明細データ（receipt）から全項目の先頭10件を�
   
 ## 回答
 ```sql
-SELECT カラム FROM テーブル WHERE 条件;
+SELECT *
+FROM receipt
+limit 10;
 ```
   
 ## 模範解答
 ```sql
-SELECT カラム FROM テーブル WHERE 条件;
+SELECT
+    *
+FROM receipt
+LIMIT 10
+;
 ```
   
 
@@ -19,12 +25,21 @@ S-002: レシート明細データ（receipt）から売上年月日（sales_ymd
   
 ## 回答
 ```sql
-SELECT カラム FROM テーブル WHERE 条件;
+SELECT sales_ymd, customer_id, product_cd, amount
+FROM receipt
+limit 10;
 ```
   
 ## 模範解答
 ```sql
-SELECT カラム FROM テーブル WHERE 条件;
+SELECT
+    sales_ymd,
+    customer_id,
+    product_cd,
+    amount
+FROM receipt
+LIMIT 10
+;
 ```
   
 
@@ -35,10 +50,19 @@ S-003: レシート明細データ（receipt）から売上年月日（sales_ymd
   
 ## 回答
 ```sql
-SELECT カラム FROM テーブル WHERE 条件;
+SELECT sales_ymd AS sales_date, customer_id, product_cd, amount
+FROM receipt
+limit 10;
 ```
   
 ## 模範解答
 ```sql
-SELECT カラム FROM テーブル WHERE 条件;
+SELECT
+    sales_ymd AS sales_date,
+    customer_id,
+    product_cd,
+    amount 
+FROM receipt
+LIMIT 10
+;
 ```
